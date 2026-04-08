@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KLYX Page</title>
 
-<!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -18,6 +17,12 @@ body {
   align-items: center;
   background: radial-gradient(circle at center, #a855f7, #0f172a);
   color: white;
+  animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
 }
 
 .container {
@@ -25,36 +30,37 @@ body {
 }
 
 .profile {
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: black;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  box-shadow: 0 0 20px rgba(168,85,247,0.8);
+  box-shadow: 0 0 30px rgba(168,85,247,0.9);
 }
 
 .profile img {
-  width: 90px;
+  width: 95px;
 }
 
 h1 {
   margin-top: 15px;
-  font-size: 26px;
+  font-size: 28px;
+  letter-spacing: 2px;
 }
 
 .subtitle {
-  color: #ddd;
+  color: #ccc;
   margin-bottom: 25px;
 }
 
 .icons {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  font-size: 26px;
+  gap: 22px;
+  font-size: 28px;
   margin-top: 20px;
 }
 
@@ -65,18 +71,32 @@ h1 {
 
 .icons a:hover {
   color: #38bdf8;
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 
 .button {
   margin-top: 40px;
   background: white;
   color: black;
-  padding: 15px 25px;
-  border-radius: 30px;
+  padding: 15px 30px;
+  border-radius: 40px;
   display: inline-block;
   font-weight: bold;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background: #38bdf8;
+  color: white;
+}
+
+@media(max-width: 500px){
+  h1 {font-size: 22px;}
+  .icons {font-size: 24px;}
 }
 </style>
 </head>
@@ -89,11 +109,11 @@ h1 {
     <img src="logo.png" alt="logo">
   </div>
 
-  <h1>klyx</h1>
+  <h1>KLYX</h1>
   <div class="subtitle">Your identity in one tap</div>
 
   <div class="icons">
-    <a href="https://www.facebook.com/people/klyxtn/61573300281091/?rdid=NYVPJpKKcaY5cEky&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18XCJMWZLb%2F" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.facebook.com/people/klyxtn/61573300281091/" target="_blank"><i class="fab fa-facebook"></i></a>
     <a href="https://www.instagram.com/klyx.tn/" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="https://tiktok.com/@klyx.tn5" target="_blank"><i class="fab fa-tiktok"></i></a>
     <a href="https://wa.me/21629691046"><i class="fab fa-whatsapp"></i></a>
@@ -101,10 +121,9 @@ h1 {
     <a href="tel:+21629691046"><i class="fas fa-phone"></i></a>
   </div>
   
-  <div class="button">
-    Digital Identity Tool 🔥
-    Tap once.Share everything 🌐
-  </div>
+  <a href="klyx.vcf" download class="button">
+    Add Me To Contacts ⚡
+  </a>
 
 </div>
 
